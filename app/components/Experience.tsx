@@ -9,7 +9,7 @@ const experiences = [
     duration: "Jan 2025 - Apr 2025",
 
     description:
-      "Worked on application support, debugging issues, monitoring systems, and collaborating with development teams to resolve technical problems.",
+      "During my internship, I gained hands-on experience working with modern web technologies such as React, Next.js, Node.js, and Tailwind CSS. I developed and improved responsive user interfaces while also contributing to backend development and API integration. I worked extensively with database CRUD operations, including creating, updating, retrieving, and deleting data efficiently. The internship also helped me strengthen my debugging and problem-solving skills by identifying and fixing issues across both frontend and backend systems. Overall, the experience enhanced my understanding of full-stack development and collaborative software development practices.",
   },
 ];
 
