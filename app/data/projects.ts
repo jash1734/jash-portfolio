@@ -24,9 +24,9 @@ export const projects = [
       "Socket.IO",
     ],
 
-    github: "https://github.com/yourusername/kachuful-game",
+    github: "hhttps://github.com/jash1734/judgement-card-game",
 
-    live: "https://yourwebsite.com",
+    live: "https://judgement-card-game.vercel.app/",
 
     thumbnail: "/images/judgement/home.jpeg",
 
@@ -65,9 +65,9 @@ export const projects = [
       "AI API",
     ],
 
-    github: "https://github.com/yourusername/recipe-generator",
+    github: "https://github.com/jash1734/recipegenie-ai",
 
-    live: "https://yourwebsite.com",
+    live: "https://recipegenie-ai.vercel.app/",
 
     thumbnail: "/images/recipegenie/home.jpeg",
 

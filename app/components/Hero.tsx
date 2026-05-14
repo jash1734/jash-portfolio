@@ -142,7 +142,7 @@ const Hero = () => {
 >
 
   <a
-    href="https://github.com/yourusername"
+    href="https://github.com/jash1734"
     target="_blank"
     className="
       p-4
@@ -160,7 +160,7 @@ const Hero = () => {
   </a>
 
   <a
-    href="https://linkedin.com/in/yourusername"
+    href="https://www.linkedin.com/in/jashdeshani/"
     target="_blank"
     className="
       p-4
@@ -178,7 +178,7 @@ const Hero = () => {
   </a>
 
   <a
-    href="mailto:yourmail@gmail.com"
+    href="mailto:jashdeshani@gmail.com"
     className="
       p-4
       rounded-full
