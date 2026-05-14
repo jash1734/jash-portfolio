@@ -28,7 +28,18 @@ export const projects = [
 
     live: "https://yourwebsite.com",
 
-    image: "/projects/kachuful.png",
+    thumbnail: "/images/judgement/home.jpeg",
+
+    images: [
+    "/images/judgement/home.jpeg",
+    "/images/judgement/img1.jpeg",
+    "/images/judgement/img2.jpeg",
+    "/images/judgement/img3.jpeg",
+    "/images/judgement/img4.jpeg",
+    "/images/judgement/img5.jpeg",
+    "/images/judgement/img6.jpeg",
+    "/images/judgement/img7.jpeg",
+  ],
   },
 
   {
@@ -58,6 +69,14 @@ export const projects = [
 
     live: "https://yourwebsite.com",
 
-    image: "/projects/recipe.png",
+    thumbnail: "/images/recipegenie/home.jpeg",
+
+    images: [
+    "/images/recipegenie/home.jpeg",
+    "/images/recipegenie/img1.jpeg",
+    "/images/recipegenie/img2.jpeg",
+    "/images/recipegenie/img3.jpeg",
+    "/images/recipegenie/img4.jpeg",
+  ],
   },
 ];

@@ -9,7 +9,7 @@ interface ProjectCardProps {
     title: string;
     description: string;
     slug: string;
-    image: string;
+    thumbnail: string;
     tech: string[];
   };
 }
@@ -44,7 +44,7 @@ const ProjectCard = ({
           "
         >
           <img
-  src={project.image}
+  src={project.thumbnail}
   alt={project.title}
   className="
     w-full

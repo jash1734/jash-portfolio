@@ -60,7 +60,7 @@ export default async function ProjectPage({
           "
         >
           <img
-  src={project.image}
+  src={project.thumbnail}
   alt={project.title}
   className="
     w-full
@@ -94,6 +94,60 @@ export default async function ProjectPage({
         >
           {project.longDescription}
         </p>
+
+        <div className="mb-16">
+
+  <h2
+    className="
+      text-3xl
+      font-semibold
+      mb-8
+    "
+  >
+    Screenshots
+  </h2>
+
+  <div
+    className="
+      grid
+      md:grid-cols-2
+      gap-6
+    "
+  >
+
+    {project.images.map((image) => (
+      <div
+
+        key={image}
+
+        className="
+          overflow-hidden
+          rounded-3xl
+          border
+          border-white/10
+          bg-white/5
+        "
+      >
+
+        <img
+          src={image}
+          alt="Project Screenshot"
+          className="
+            w-full
+            h-full
+            object-cover
+            hover:scale-105
+            transition
+            duration-500
+          "
+        />
+
+      </div>
+    ))}
+
+  </div>
+
+</div>
 
         <div className="mb-14">
 
