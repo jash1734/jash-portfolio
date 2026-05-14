@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 interface ProjectCardProps {
@@ -43,9 +43,11 @@ const ProjectCard = ({
             relative
           "
         >
-          <img
+          <Image
   src={project.thumbnail}
   alt={project.title}
+   width={600}
+  height={400}
   className="
     w-full
     h-full

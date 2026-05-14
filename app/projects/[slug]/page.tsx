@@ -1,7 +1,6 @@
 import { projects } from "@/app/data/projects";
-
 import { notFound } from "next/navigation";
-
+import Image from "next/image";
 import Link from "next/link";
 
 interface ProjectPageProps {
@@ -59,9 +58,11 @@ export default async function ProjectPage({
             bg-white/5
           "
         >
-          <img
+          <Image
   src={project.thumbnail}
   alt={project.title}
+   width={1200}
+  height={800}
   className="
     w-full
     object-cover
@@ -129,9 +130,11 @@ export default async function ProjectPage({
         "
       >
 
-        <img
+        <Image
           src={image}
           alt="Project Screenshot"
+           width={1200}
+          height={800}
           className="
             w-full
             h-full
