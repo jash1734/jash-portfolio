@@ -62,7 +62,8 @@ export const projects = [
     tech: [
       "Next.js",
       "Tailwind CSS",
-      "AI API",
+      "OpenRouter API",
+      "Gemini Vision API"
     ],
 
     github: "https://github.com/jash1734/recipegenie-ai",
