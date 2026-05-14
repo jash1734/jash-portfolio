@@ -1,9 +1,66 @@
+"use client";
+
+import { useRef, useState } from "react";
+
+import emailjs from "@emailjs/browser";
+
 import {
   Mail,
   MapPin,
 } from "lucide-react";
 
 const Contact = () => {
+
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const [loading, setLoading] = useState(false);
+
+  const [success, setSuccess] = useState("");
+
+  const sendEmail = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
+
+    e.preventDefault();
+
+    if (!formRef.current) return;
+
+    try {
+
+      setLoading(true);
+
+      await emailjs.sendForm(
+
+        process.env
+          .NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+
+        process.env
+          .NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+
+        formRef.current,
+
+        process.env
+          .NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+
+      );
+
+      setSuccess("Message sent successfully!");
+
+      formRef.current.reset();
+
+    } catch (error) {
+
+      setSuccess("Failed to send message.");
+
+    } finally {
+
+      setLoading(false);
+
+      setTimeout(() => {
+        setSuccess("");
+      }, 3000);
+    }
+  };
 
   return (
     <section
@@ -122,73 +179,70 @@ const Contact = () => {
 
           </div>
 
-          <form className="space-y-6">
+          <form
+            ref={formRef}
+            onSubmit={sendEmail}
+            className="space-y-6"
+          >
 
-            <div>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+              className="
+                w-full
+                bg-black/20
+                border
+                border-white/10
+                rounded-2xl
+                px-5
+                py-4
+                outline-none
+                focus:border-purple-500
+              "
+            />
 
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="
-                  w-full
-                  bg-black/20
-                  border
-                  border-white/10
-                  rounded-2xl
-                  px-5
-                  py-4
-                  outline-none
-                  focus:border-purple-500
-                  transition
-                "
-              />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+              className="
+                w-full
+                bg-black/20
+                border
+                border-white/10
+                rounded-2xl
+                px-5
+                py-4
+                outline-none
+                focus:border-purple-500
+              "
+            />
 
-            </div>
-
-            <div>
-
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="
-                  w-full
-                  bg-black/20
-                  border
-                  border-white/10
-                  rounded-2xl
-                  px-5
-                  py-4
-                  outline-none
-                  focus:border-purple-500
-                  transition
-                "
-              />
-
-            </div>
-
-            <div>
-
-              <textarea
-                rows={7}
-                placeholder="Your Message"
-                className="
-                  w-full
-                  bg-black/20
-                  border
-                  border-white/10
-                  rounded-2xl
-                  px-5
-                  py-4
-                  outline-none
-                  focus:border-purple-500
-                  transition
-                  resize-none
-                "
-              />
-
-            </div>
+            <textarea
+              rows={7}
+              name="message"
+              placeholder="Your Message"
+              required
+              className="
+                w-full
+                bg-black/20
+                border
+                border-white/10
+                rounded-2xl
+                px-5
+                py-4
+                outline-none
+                focus:border-purple-500
+                resize-none
+              "
+            />
 
             <button
+              type="submit"
+              disabled={loading}
               className="
                 w-full
                 py-4
@@ -200,8 +254,16 @@ const Contact = () => {
                 font-medium
               "
             >
-              Send Message
+              {loading
+                ? "Sending..."
+                : "Send Message"}
             </button>
+
+            {success && (
+              <p className="text-center text-purple-400">
+                {success}
+              </p>
+            )}
 
           </form>
 
