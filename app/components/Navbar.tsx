@@ -101,6 +101,14 @@ const Navbar = () => {
           </a>
 
           <a
+            href="#education"
+            onClick={() => setOpen(false)}
+            className="hover:text-purple-400 transition"
+          >
+            Education
+          </a>
+
+          <a
             href="#contact"
             className="hover:text-purple-400 transition"
           >
@@ -127,6 +135,7 @@ const Navbar = () => {
           className="
             md:hidden
             text-white
+            cursor-pointer
           "
         >
           {open ? <X size={28} /> : <Menu size={28} />}
@@ -179,6 +188,14 @@ const Navbar = () => {
             className="hover:text-purple-400 transition"
           >
             Projects
+          </a>
+
+          <a
+            href="#education"
+            onClick={() => setOpen(false)}
+            className="hover:text-purple-400 transition"
+          >
+            Education
           </a>
 
           <a
