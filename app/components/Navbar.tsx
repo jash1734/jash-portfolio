@@ -151,6 +151,7 @@ const Navbar = () => {
             pb-6
             flex
             flex-col
+            items-end
             gap-5
             text-gray-300
             bg-black/40
