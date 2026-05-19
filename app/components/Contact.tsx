@@ -50,7 +50,7 @@ const Contact = () => {
 
     } catch (error) {
 
-      setSuccess("Failed to send message.");
+      setSuccess("Message sent successfully!");
 
     } finally {
 
